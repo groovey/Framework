@@ -4,5 +4,7 @@ namespace Groovey\Auth;
 
 class Auth {
 
-    public function test();
+    public function test() {
+
+    }
 }
