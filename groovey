@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+set_time_limit(0);
+
+define('BASE_PATH', __DIR__);
+
+require BASE_PATH . '/vendor/autoload.php';
+require BASE_PATH . '/bootstrap/app.php';
+require BASE_PATH . '/bootstrap/environment.php';
+require BASE_PATH . '/bootstrap/providers.php';
+require BASE_PATH . '/bootstrap/console.php';
+
+$status = $console->run();
+
+exit($status);
