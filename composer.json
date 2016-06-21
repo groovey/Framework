@@ -43,6 +43,5 @@
         "psr-4": {
             "Groovey\\": "src/Groovey/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
