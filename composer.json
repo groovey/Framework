@@ -41,7 +41,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Groovey\\": "app/"
+            "Groovey\\": "src/Groovey/"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
