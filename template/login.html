@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<body class="theme-default page-login">
+    <div class="page-bg"></div>
+    <div class="container">
+        <div class="header">
+            <img src="/images/tumblr.png">
+        </div>
+        <div class="form text-center">
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username"
+                        name="username" value= "{{ last_username }}"
+                    >
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password"
+                        name="password"
+                    >
+                </div>
+                {% if error %}
+                <div class="form-group">
+                    <p class="message">{{ error }}</p>
+                </div>
+                {% endif %}
+                <div class="form-group">
+                    <button type="submit" name="submit" value="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+                <p>
+                    <a href='/forgot'>Forgot Password?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

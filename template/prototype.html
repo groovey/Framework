@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<body class="theme-default main-menu-fixed main-menu-animated main-navbar-fixed">
+<div id="main-wrapper">
+
+    {% include 'navbar.html' %}
+
+    {% include 'menu.html' %}
+
+    <div id="content-wrapper">
+
+        {% include 'listing.html' with {'title' : title} %}
+
+        <div id="main-menu-bg"></div>
+
+    </div>
+
+</div>
+</body>
+{% endblock %}
