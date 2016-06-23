@@ -12,7 +12,6 @@ use Silex\Provider\WebProfilerServiceProvider;
 use Silex\Provider\FormServiceProvider;
 use Whoops\Provider\Silex\WhoopsServiceProvider;
 use EmanueleMinotto\FakerServiceProvider\FakerServiceProvider;
-
 use Groovey\Providers\Config as ConfigServiceProvider;
 use Groovey\Providers\Mysql as MysqlServiceProvider;
 use Groovey\Providers\Dumper as DumperServiceProvider;

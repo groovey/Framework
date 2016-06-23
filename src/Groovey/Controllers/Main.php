@@ -26,7 +26,6 @@ class Main implements ControllerProviderInterface
 
     public function index(Application $app, Request $request)
     {
-
         $auth = new Auth();
         $auth->test();
 

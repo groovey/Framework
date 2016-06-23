@@ -2,9 +2,9 @@
 
 namespace Groovey\Auth;
 
-class Auth {
-
-    public function test() {
-
+class Auth
+{
+    public function test()
+    {
     }
 }
