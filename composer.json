@@ -18,9 +18,9 @@
 
         "illuminate/database": "~5.2",
 
-        "groovey/migration" : "dev-master",
-        "groovey/seeder" : "dev-master",
-        "groovey/generator" : "dev-master",
+        "groovey/migration" : "~1.4",
+        "groovey/seeder" : "~1.1",
+        "groovey/generator" : "~1.2",
 
 
 
