@@ -3,15 +3,15 @@
 use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SerializerServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
-use Silex\Provider\UrlGeneratorServiceProvider;
+// use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\WebProfilerServiceProvider;
-use Silex\Provider\FormServiceProvider;
+// use Silex\Provider\FormServiceProvider;
 use Whoops\Provider\Silex\WhoopsServiceProvider;
-use EmanueleMinotto\FakerServiceProvider\FakerServiceProvider;
+// use EmanueleMinotto\FakerServiceProvider\FakerServiceProvider;
 use Groovey\Providers\Config as ConfigServiceProvider;
 use Groovey\Providers\Mysql as MysqlServiceProvider;
 use Groovey\Providers\Dumper as DumperServiceProvider;
@@ -19,9 +19,9 @@ use Groovey\Providers\Dumper as DumperServiceProvider;
 $app->register(new SessionServiceProvider());
 $app->register(new SerializerServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
-$app->register(new UrlGeneratorServiceProvider());
+// $app->register(new UrlGeneratorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
-$app->register(new FormServiceProvider());
+// $app->register(new FormServiceProvider());
 $app->register(new ValidatorServiceProvider());
 
 $app->register(new ConfigServiceProvider(), [
@@ -33,10 +33,10 @@ $app->register(new DumperServiceProvider(), [
         'dumper.show' => $app->config('app.debug'),
     ]);
 
-$app->register(new MonologServiceProvider(), [
-        'monolog.name'    => 'app',
-        'monolog.logfile' => APP_PATH.'/storage/logs/'.date('Y-m-d').'.log',
-    ]);
+// $app->register(new MonologServiceProvider(), [
+//         'monolog.name'    => 'app',
+//         'monolog.logfile' => APP_PATH.'/storage/logs/'.date('Y-m-d').'.log',
+//     ]);
 
 $app->register(new TwigServiceProvider(), [
         'twig.path' => [
@@ -46,9 +46,9 @@ $app->register(new TwigServiceProvider(), [
             ],
     ]);
 
-$app->register(new FakerServiceProvider(), [
-        'locale' => 'en_US',
-    ]);
+// $app->register(new FakerServiceProvider(), [
+//         'locale' => 'en_US',
+//     ]);
 
 $app->register(new MysqlServiceProvider(), [
         'mysql.connections' => $app->config('database.mysql'),

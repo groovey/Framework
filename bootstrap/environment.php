@@ -1,6 +1,7 @@
 <?php
 
-Dotenv::load(APP_PATH);
+$dotenv = new Dotenv\Dotenv(APP_PATH);
+$dotenv->load();
 
 define('ENVIRONMENT', getenv('ENVIRONMENT'));
 

@@ -2,8 +2,14 @@
 
 namespace Groovey\Providers;
 
+use Pimple\Container as PimpleContainer;
+use Pimple\ServiceProviderInterface;
 use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Silex\Api\BootableProviderInterface;
+use Silex\Api\EventListenerProviderInterface;
+use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
@@ -11,7 +17,7 @@ use Illuminate\Cache\CacheManager;
 
 class Mysql implements ServiceProviderInterface
 {
-    public function register(Application $app)
+    public function register(PimpleContainer $app)
     {
         $app['mysql.global']   = true;
         $app['mysql.eloquent'] = true;
@@ -28,21 +34,21 @@ class Mysql implements ServiceProviderInterface
                 'logging'   => false,
         ];
 
-        $app['mysql.container'] = $app->share(function () {
+        $app['mysql.container'] = $app->protect(function () {
             return new Container();
         });
 
-        $app['mysql.dispatcher'] = $app->share(function () use ($app) {
+        $app['mysql.dispatcher'] = $app->protect(function () use ($app) {
             return new Dispatcher($app['mysql.container']);
         });
 
         if (class_exists('Illuminate\Cache\CacheManager')) {
-            $app['mysql.cache_manager'] = $app->share(function () use ($app) {
+            $app['mysql.cache_manager'] = $app->protect(function () use ($app) {
                 return new CacheManager($app['mysql.container']);
             });
         }
 
-        $app['mysql'] = $app->share(function ($name) use ($app) {
+        $app['mysql'] = $app->protect(function ($name) use ($app) {
 
             $capsule = new Capsule($app['mysql.container']);
             $capsule->setEventDispatcher($app['mysql.dispatcher']);

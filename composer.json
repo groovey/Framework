@@ -18,14 +18,12 @@
 
         "illuminate/database": "~5.2",
 
-
         "groovey/seeder" : "~1.1",
         "groovey/generator" : "~1.2",
-
+        "groovey/migration" : "~1.4",
 
         "filp/whoops" : "~2.0",
         "vlucas/phpdotenv" : "~2.0"
-
     },
     "autoload": {
         "psr-4": {

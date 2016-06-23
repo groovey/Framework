@@ -2,17 +2,26 @@
 
 namespace Groovey\Providers;
 
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Silex\Api\BootableProviderInterface;
+use Silex\Api\EventListenerProviderInterface;
+use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+
+
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository;
 
-class Config implements ServiceProviderInterface
+class Config implements ServiceProviderInterface, BootableProviderInterface
 {
-    public function register(Application $app)
+
+
+    public function register(Container $app)
     {
-        $app['config'] = $app->share(function ($app) {
+        $app['config'] = $app->protect(function ($app) {
 
                 $path = $app['config.path'];
                 $env  = $app['config.environment'];
@@ -27,4 +36,6 @@ class Config implements ServiceProviderInterface
     public function boot(Application $app)
     {
     }
+
+
 }

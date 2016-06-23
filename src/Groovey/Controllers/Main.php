@@ -3,7 +3,9 @@
 namespace Groovey\Controllers;
 
 use Silex\Application;
-use Silex\ControllerProviderInterface;
+// use Silex\ControllerProviderInterface;
+use Silex\Api\ControllerProviderInterface;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Groovey\Middlewares\Main as MiddlewareMain;
