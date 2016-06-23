@@ -1,6 +1,5 @@
 <?php
 
-$app->mount('/', new App\Controllers\Main());
-$app->mount('/prototype', new App\Controllers\Prototype());
+$app->mount('/', new Groovey\Controllers\Main());
 
 return $app;
