@@ -19,6 +19,11 @@
         "symfony/config" : "~3.1",
 
         "illuminate/database": "~5.2",
+        "illuminate/support": "~5.2",
+        "illuminate/config": "~5.2",
+
+
+
 
         "groovey/seeder" : "~1.1",
         "groovey/generator" : "~1.2",
