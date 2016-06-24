@@ -6,19 +6,12 @@ use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Silex\Application;
 use Silex\Api\BootableProviderInterface;
-use Silex\Api\EventListenerProviderInterface;
-use Symfony\Component\HttpKernel\KernelEvents;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
-
-
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository;
 
 class Config implements ServiceProviderInterface, BootableProviderInterface
 {
-
-
     public function register(Container $app)
     {
         $app['config'] = $app->protect(function ($app) {

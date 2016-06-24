@@ -8,6 +8,7 @@ use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\WebProfilerServiceProvider;
+use Silex\Provider\VarDumperServiceProvider;
 
 use Whoops\Provider\Silex\WhoopsServiceProvider;
 
@@ -20,6 +21,7 @@ $app->register(new SerializerServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new ValidatorServiceProvider());
+$app->register(new VarDumperServiceProvider());
 
 $app->register(new ConfigServiceProvider(), [
         'config.path'        => APP_PATH.'/config',

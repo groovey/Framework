@@ -3,9 +3,7 @@
 namespace Groovey\Controllers;
 
 use Silex\Application;
-// use Silex\ControllerProviderInterface;
 use Silex\Api\ControllerProviderInterface;
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Groovey\Middlewares\Main as MiddlewareMain;
@@ -32,6 +30,16 @@ class Main implements ControllerProviderInterface
         $auth->test();
 
         $user = new User();
+
+        // $app['dumper'];
+
+        // $this->debug('test');
+
+        dump('test');
+
+
+
+        // $app->debug('Konichiwa');
 
         return new Response('Welcome to the Groovey Homepage.');
     }

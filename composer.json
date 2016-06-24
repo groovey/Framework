@@ -15,6 +15,7 @@
 
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
+        "symfony/var-dumper" : "~3.1",
         "illuminate/database": "~5.2",
 
         "groovey/seeder" : "~1.1",

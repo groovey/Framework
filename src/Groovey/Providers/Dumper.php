@@ -7,7 +7,6 @@ use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Silex\Application;
 use Silex\Api\BootableProviderInterface;
-
 use Symfony\Component\VarDumper\VarDumper;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\CliDumper;
@@ -18,6 +17,8 @@ class Dumper implements ServiceProviderInterface, BootableProviderInterface
     public function register(Container $app)
     {
         $app['dumper'] = $app->protect(function ($app) {
+            die('hey');
+
             return new VarDumper();
         });
     }
