@@ -14,7 +14,8 @@ class Config implements ServiceProviderInterface, BootableProviderInterface
 {
     public function register(Container $app)
     {
-        $app['config'] = $app->protect(function ($app) {
+        $app['config'] = $app->protect(function($test) use ($app) {
+
 
                 $path = $app['config.path'];
                 $env  = $app['config.environment'];

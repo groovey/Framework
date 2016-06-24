@@ -12,7 +12,7 @@ use Silex\Provider\VarDumperServiceProvider;
 
 use Whoops\Provider\Silex\WhoopsServiceProvider;
 
-use Groovey\Providers\Config as ConfigServiceProvider;
+// use Groovey\Providers\Config as ConfigServiceProvider;
 use Groovey\Providers\Mysql as MysqlServiceProvider;
 use Groovey\Providers\Dumper as DumperServiceProvider;
 
@@ -23,10 +23,10 @@ $app->register(new ServiceControllerServiceProvider());
 $app->register(new ValidatorServiceProvider());
 $app->register(new VarDumperServiceProvider());
 
-$app->register(new ConfigServiceProvider(), [
-        'config.path'        => APP_PATH.'/config',
-        'config.environment' => ENVIRONMENT,
-    ]);
+// $app->register(new ConfigServiceProvider(), [
+//         'config.path'        => APP_PATH.'/config',
+//         'config.environment' => ENVIRONMENT,
+//     ]);
 
 $app->register(new DumperServiceProvider(), [
         'dumper.show' => $app->config('app.debug'),
