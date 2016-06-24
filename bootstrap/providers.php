@@ -56,8 +56,8 @@ if ($app->config('app.profiler')) {
         ]);
 }
 
-if ($app->config('app.debug') && $app->config('app.whoops')) {
-    $app->register(new WhoopsServiceProvider());
-}
+// if ($app->config('app.debug') && $app->config('app.whoops')) {
+//     $app->register(new WhoopsServiceProvider());
+// }
 
 return $app;
