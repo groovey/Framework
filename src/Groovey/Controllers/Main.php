@@ -31,15 +31,7 @@ class Main implements ControllerProviderInterface
 
         $user = new User();
 
-        // $app['dumper'];
-
-        // $this->debug('test');
-
-        dump('test');
-
-
-
-        // $app->debug('Konichiwa');
+        $app->debug('Konichiwa');
 
         return new Response('Welcome to the Groovey Homepage.');
     }

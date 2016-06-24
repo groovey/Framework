@@ -9,7 +9,7 @@ class app extends Application
     use Silex\Application\UrlGeneratorTrait;
     use Groovey\Traits\Config;
     use Groovey\Traits\Translation;
-    // use Groovey\Traits\Dumper;
+    use Groovey\Traits\Dumper;
 }
 
 $app = new App();

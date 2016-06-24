@@ -2,7 +2,6 @@
 
 namespace Groovey\Providers;
 
-
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Silex\Application;
@@ -17,20 +16,18 @@ class Dumper implements ServiceProviderInterface, BootableProviderInterface
     public function register(Container $app)
     {
         $app['dumper'] = $app->protect(function ($app) {
-            die('hey');
-
             return new VarDumper();
         });
     }
 
     public function boot(Application $app)
     {
-        // VarDumper::setHandler(function ($var) {
+        VarDumper::setHandler(function ($var) {
 
-        //     $cloner = new VarCloner();
-        //     $dumper = 'cli' === PHP_SAPI ? new CliDumper() : new HtmlDumper();
+            $cloner = new VarCloner();
+            $dumper = 'cli' === PHP_SAPI ? new CliDumper() : new HtmlDumper();
 
-        //     $dumper->dump($cloner->cloneVar($var));
-        // });
+            $dumper->dump($cloner->cloneVar($var));
+        });
     }
 }
