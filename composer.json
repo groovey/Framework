@@ -15,13 +15,13 @@
 
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
-
         "illuminate/database": "~5.2",
 
         "groovey/seeder" : "~1.1",
         "groovey/generator" : "~1.2",
         "groovey/migration" : "~1.4",
 
+        "monolog/monolog": "~1.19",
         "filp/whoops" : "~2.0",
         "vlucas/phpdotenv" : "~2.0"
     },

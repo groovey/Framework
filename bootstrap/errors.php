@@ -1,8 +1,9 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
-$app->error(function (\Exception $e, $code) use ($app) {
+$app->error(function (\Exception $e, Request $request, $code) use ($app) {
 
     if ($app->config('app.debug')) {
         return;
