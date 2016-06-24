@@ -6,24 +6,33 @@ use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Silex\Application;
 use Silex\Api\BootableProviderInterface;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Config\FileLoader;
+use Symfony\Component\Finder\Finder;
 use Illuminate\Config\Repository;
+
 
 class Config implements ServiceProviderInterface, BootableProviderInterface
 {
     public function register(Container $app)
     {
-        $app['config'] = $app->protect(function($test) use ($app) {
+        $app['config'] = function($app) {
 
-                $path = $app['config.path'];
-                $env  = $app['config.environment'];
+            $path = $app['config.path'];
+            $env  = $app['config.environment'];
 
-                $filesystem = new Filesystem();
-                $loader     = new FileLoader($filesystem, $path);
+            $folder = $path . '/' . strtolower($env);
 
-                return new Repository($loader, $env);
-            });
+            $phpFiles = Finder::create()->files()->name('*.php')->in($folder)->depth(0);
+
+            foreach ($phpFiles as $file) {
+                $files[basename($file->getRealPath(), '.php')] = $file->getRealPath();
+            }
+
+            $app->debug($files);
+
+            $test = ['app' => require '/usr/share/nginx/html/Groovey/config/localhost/app.php'];
+
+            return new Repository($test);
+            };
     }
 
     public function boot(Application $app)
