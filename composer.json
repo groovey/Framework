@@ -22,7 +22,7 @@
         "groovey/generator" : "*",
         "groovey/migration" : "*",
 
-        "filp/whoops" : "~2.0",
+        "doctrine/dbal" : "~2.5.4",
         "monolog/monolog": "~1.19",
         "vlucas/phpdotenv" : "~2.0"
 
