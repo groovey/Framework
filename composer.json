@@ -23,7 +23,6 @@
         "groovey/migration" : "*",
 
         "doctrine/dbal" : "~2.5",
-        "doctrine/orm" : "~2.5",
 
         "monolog/monolog": "~1.19",
         "vlucas/phpdotenv" : "~2.0"
