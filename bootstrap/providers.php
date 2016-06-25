@@ -12,7 +12,7 @@ use Silex\Provider\VarDumperServiceProvider;
 
 use Whoops\Provider\Silex\WhoopsServiceProvider;
 
-use Groovey\Providers\Config as ConfigServiceProvider;
+use Groovey\Config\Providers\Config as ConfigServiceProvider;
 use Groovey\Providers\Mysql as MysqlServiceProvider;
 use Groovey\Providers\Dumper as DumperServiceProvider;
 
