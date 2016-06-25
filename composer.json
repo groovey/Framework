@@ -22,8 +22,8 @@
         "groovey/generator" : "*",
         "groovey/migration" : "*",
 
-        "monolog/monolog": "~1.19",
         "filp/whoops" : "~2.0",
+        "monolog/monolog": "~1.19",
         "vlucas/phpdotenv" : "~2.0"
 
     },

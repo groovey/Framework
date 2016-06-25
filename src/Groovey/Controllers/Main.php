@@ -26,12 +26,9 @@ class Main implements ControllerProviderInterface
 
     public function index(Application $app, Request $request)
     {
-        $auth = new Auth();
-        $auth->test();
-
         $user = new User();
 
-        $app->debug('Konichiwa');
+        $app->debug('Welcome to Groovey Page');
 
         return new Response('Welcome to the Groovey Homepage.');
     }

@@ -10,11 +10,10 @@ use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\WebProfilerServiceProvider;
 use Silex\Provider\VarDumperServiceProvider;
 
-use Whoops\Provider\Silex\WhoopsServiceProvider;
-
 use Groovey\Config\Providers\Config as ConfigServiceProvider;
 use Groovey\Framework\Providers\Mysql as MysqlServiceProvider;
 use Groovey\Framework\Providers\Dumper as DumperServiceProvider;
+
 
 $app->register(new SessionServiceProvider());
 $app->register(new SerializerServiceProvider());
@@ -56,8 +55,11 @@ if ($app->config('app.profiler')) {
         ]);
 }
 
-// if ($app->config('app.debug') && $app->config('app.whoops')) {
-//     $app->register(new WhoopsServiceProvider());
-// }
+if ($app->config('app.debug') && $app->config('app.whoops')) {
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $whoops->register();
+}
+
 
 return $app;
