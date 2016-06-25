@@ -17,10 +17,10 @@
         "silex/web-profiler": "~2.0",
         "symfony/var-dumper" : "~3.1",
 
-        "groovey/config" : "~1.0",
-        "groovey/seeder" : "~1.1",
-        "groovey/generator" : "~1.2",
-        "groovey/migration" : "~1.4",
+        "groovey/config" : "dev-master",
+        "groovey/seeder" : "dev-master",
+        "groovey/generator" : "dev-master",
+        "groovey/migration" : "dev-master",
 
         "monolog/monolog": "~1.19",
         "filp/whoops" : "~2.0",
