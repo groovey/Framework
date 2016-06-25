@@ -16,14 +16,8 @@
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
         "symfony/var-dumper" : "~3.1",
-        "symfony/config" : "~3.1",
 
-        "illuminate/database": "~5.2",
-        "illuminate/support": "~5.2",
-        "illuminate/config": "~5.2",
-        "illuminate/filesystem": "~5.2",
-
-
+        "groovey/config" : "~1.0",
         "groovey/seeder" : "~1.1",
         "groovey/generator" : "~1.2",
         "groovey/migration" : "~1.4",
@@ -31,6 +25,7 @@
         "monolog/monolog": "~1.19",
         "filp/whoops" : "~2.0",
         "vlucas/phpdotenv" : "~2.0"
+
     },
     "autoload": {
         "psr-4": {
