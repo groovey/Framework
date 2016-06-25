@@ -1,6 +1,6 @@
 <?php
 
-namespace Groovey\Models;
+namespace Groovey\Framework\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\Validator\Constraints as Assert;

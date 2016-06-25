@@ -13,8 +13,8 @@ use Silex\Provider\VarDumperServiceProvider;
 use Whoops\Provider\Silex\WhoopsServiceProvider;
 
 use Groovey\Config\Providers\Config as ConfigServiceProvider;
-use Groovey\Providers\Mysql as MysqlServiceProvider;
-use Groovey\Providers\Dumper as DumperServiceProvider;
+use Groovey\Framework\Providers\Mysql as MysqlServiceProvider;
+use Groovey\Framework\Providers\Dumper as DumperServiceProvider;
 
 $app->register(new SessionServiceProvider());
 $app->register(new SerializerServiceProvider());

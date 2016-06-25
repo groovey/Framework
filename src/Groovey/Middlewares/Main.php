@@ -1,6 +1,6 @@
 <?php
 
-namespace Groovey\Middlewares;
+namespace Groovey\Framework\Middlewares;
 
 class Main
 {

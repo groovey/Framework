@@ -1,6 +1,6 @@
 <?php
 
-namespace Groovey\Auth;
+namespace Groovey\Framework\Auth;
 
 class Auth
 {

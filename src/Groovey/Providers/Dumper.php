@@ -1,6 +1,6 @@
 <?php
 
-namespace Groovey\Providers;
+namespace Groovey\Framework\Providers;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

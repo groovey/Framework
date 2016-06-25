@@ -1,6 +1,6 @@
 <?php
 
-namespace Groovey\Traits;
+namespace Groovey\Framework\Traits;
 
 trait Translation
 {

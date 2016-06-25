@@ -1,5 +1,5 @@
 <?php
 
-$app->mount('/', new Groovey\Controllers\Main());
+$app->mount('/', new Groovey\Framework\Controllers\Main());
 
 return $app;
