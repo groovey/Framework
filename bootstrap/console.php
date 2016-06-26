@@ -11,17 +11,12 @@ $console = new Application('Groovey', '1.0.0');
 $console->setDispatcher($app['dispatcher']);
 
 
-// $adapter   = new Adapter(new Mysql());
-// $migration = new Migration($adapter);
 
 
+$console->addCommands([
+            new Groovey\Migration\Commands\About(),
+            new Groovey\Migration\Commands\Init($app),
 
-// $commands = array_merge(
-//                     $migration->getCommands()
-
-//                 );
-
-
-// $console->addCommands($commands);
+        ]);
 
 return $console;
