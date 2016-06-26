@@ -18,9 +18,9 @@
         "symfony/var-dumper" : "~3.1",
 
         "groovey/config" : "*",
+        "groovey/migration" : "*",
         "groovey/seeder" : "*",
         "groovey/generator" : "*",
-        "groovey/migration" : "*",
 
         "doctrine/dbal" : "~2.5",
 

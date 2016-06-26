@@ -55,4 +55,17 @@ $app->register(new TwigServiceProvider(), [
 //         ]);
 // }
 
+
+
+$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'db.options' => array(
+            'driver'    => 'pdo_mysql',
+            'host'      => 'localhost',
+            'dbname'    => 'test',
+            'user'      => 'root',
+            'password'  => 'webdevel',
+            'charset'   => 'utf8mb4',
+        ),
+    ));
+
 return $app;

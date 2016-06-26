@@ -2,31 +2,31 @@
 
 namespace Groovey\Framework\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Symfony\Component\Validator\Constraints as Assert;
+use Pimple\Container;
 
-class User extends Model
+class User
 {
-    public static function getContraints()
-    {
-        $constraint = new Assert\Collection([
-            'name' => new Assert\NotBlank(),
-            'password' => new Assert\NotBlank(),
-        ]);
 
-        return $constraint;
+    public function __construct(Container $app)
+    {
+        $this->app = $app;
+    }
+    public function test(){
+
+        $app = $this->app;
+
     }
 
-    public static function add(array $data)
-    {
-        extract($data);
+    // public static function add(array $data)
+    // {
+    //     extract($data);
 
-        $user           = new self();
-        $user->name     = $name;
-        $user->password = $password;
+    //     $user           = new self();
+    //     $user->name     = $name;
+    //     $user->password = $password;
 
-        $user->save();
+    //     $user->save();
 
-        return $user->id;
-    }
+    //     return $user->id;
+    // }
 }
