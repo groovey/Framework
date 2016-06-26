@@ -19,6 +19,7 @@
 
         "groovey/config" : "~1.5",
         "groovey/migration" : "~1.7",
+        "groovey/seeder" : "~1.2",
 
 
         "monolog/monolog": "~1.19",
