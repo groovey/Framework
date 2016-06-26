@@ -61,7 +61,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
             'driver'    => 'pdo_mysql',
             'host'      => 'localhost',
-            'dbname'    => 'test',
+            'dbname'    => 'groovey',
             'user'      => 'root',
             'password'  => 'webdevel',
             'charset'   => 'utf8mb4',
