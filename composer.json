@@ -20,7 +20,7 @@
         "groovey/config" : "~1.5",
         "groovey/migration" : "~1.7",
         "groovey/seeder" : "~1.2",
-        "groovey/generator" : "~1.3",
+        "groovey/generator" : "~1.4",
 
 
 
