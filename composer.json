@@ -18,10 +18,6 @@
         "symfony/var-dumper" : "~3.0",
 
         "groovey/config" : "@dev",
-        "groovey/orm" : "@dev",
-        "groovey/migration" : "~1.7",
-        "groovey/seeder" : "~1.2",
-        "groovey/generator" : "~1.4",
 
 
 
