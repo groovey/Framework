@@ -29,5 +29,7 @@
         "psr-4": {
             "Groovey\\Framework\\": "src/Groovey/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
 }
