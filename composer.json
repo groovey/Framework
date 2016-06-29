@@ -17,6 +17,7 @@
         "silex/web-profiler": "~2.0",
         "symfony/var-dumper" : "~3.0",
 
+        "groovey/config" : "dev-master",
 
 
 
