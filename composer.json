@@ -16,14 +16,10 @@
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
         "symfony/var-dumper" : "~3.0",
-
         "groovey/config" : "dev-master",
-
-
-
+        "groovey/orm" : "dev-master",
         "monolog/monolog": "~1.19",
         "vlucas/phpdotenv" : "~2.0"
-
     },
     "autoload": {
         "psr-4": {
