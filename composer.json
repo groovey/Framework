@@ -18,7 +18,9 @@
         "vlucas/phpdotenv" : "~2.0",
         "groovey/config" : "dev-master",
         "groovey/orm" : "dev-master",
-        "groovey/migration" : "dev-master"
+        "groovey/migration" : "dev-master",
+        "groovey/seeder" : "dev-master",
+        "groovey/generator" : "dev-master"
     },
     "autoload": {
         "psr-4": {
