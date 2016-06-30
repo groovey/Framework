@@ -9,7 +9,8 @@ use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\WebProfilerServiceProvider;
 use Silex\Provider\VarDumperServiceProvider;
-use Groovey\Config\Providers\Config as ConfigServiceProvider;
+use Groovey\Config\Providers\ConfigServiceProvider;
+use Groovey\ORM\Providers\ORMServiceProvider;
 use Groovey\Framework\Providers\Dumper as DumperServiceProvider;
 
 $app->register(new SessionServiceProvider());
@@ -41,15 +42,8 @@ $app->register(new TwigServiceProvider(), [
             ],
     ]);
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => array(
-            'driver'    => 'pdo_mysql',
-            'host'      => 'localhost',
-            'dbname'    => 'groovey',
-            'user'      => 'root',
-            'password'  => 'webdevel',
-            'charset'   => 'utf8mb4',
-        ),
-    ));
+$app->register(new ORMServiceProvider(), [
+        'db.connection' => $app->config('database.mysql')
+    ]);
 
 return $app;

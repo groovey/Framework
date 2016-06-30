@@ -10,7 +10,6 @@ $console->setDispatcher($app['dispatcher']);
 
 $console->addCommands([
             new Groovey\Migration\Commands\Init($app),
-            new Groovey\Migration\Commands\Reset($app),
             new Groovey\Migration\Commands\Listing($app),
             new Groovey\Migration\Commands\Status($app),
             new Groovey\Migration\Commands\Create($app),
