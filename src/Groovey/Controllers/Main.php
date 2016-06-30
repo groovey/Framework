@@ -7,7 +7,6 @@ use Silex\Api\ControllerProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Groovey\Framework\Middlewares\Main as MiddlewareMain;
-use Groovey\Framework\Auth\Auth;
 use Groovey\Framework\Models\User;
 
 class Main implements ControllerProviderInterface

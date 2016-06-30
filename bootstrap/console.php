@@ -20,6 +20,7 @@ $console->addCommands([
             new Groovey\Seeder\Commands\Run($app),
             new Groovey\Seeder\Commands\Run($app),
             new Groovey\Generator\Commands\Create($app),
+            new Groovey\Framework\Commands\About($app),
       ]);
 
 return $console;
