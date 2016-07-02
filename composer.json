@@ -20,7 +20,8 @@
         "groovey/orm" : "dev-master",
         "groovey/migration" : "dev-master",
         "groovey/seeder" : "dev-master",
-        "groovey/generator" : "dev-master"
+        "groovey/generator" : "dev-master",
+        "groovey/form" : "dev-master"
     },
     "autoload": {
         "psr-4": {
