@@ -1,6 +1,6 @@
 {
     "name": "groovey/framework",
-    "description": "A micro framework",
+    "description": "Groovey Framework Package",
     "license": "MIT",
     "type": "project",
     "authors": [
