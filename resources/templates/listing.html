@@ -1,12 +1,7 @@
 <div class="row page-header">
     <div class="col-sm-8">
         <div class="btn-group">
-            <a href="#" class="btn btn-primary">
-                <i class="glyphicon glyphicon-home"></i>
-                <span class="m-l-sm">Home</span>
-            </a>
-            <a href="#" class="btn btn-default">Snippets</a>
-            <a href="#" class="btn btn-default">{{title}}</a>
+            {{app.breadcrumb.render|raw}}
         </div>
     </div>
     <div class="col-sm-4 text-right ">
