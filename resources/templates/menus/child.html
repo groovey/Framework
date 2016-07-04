@@ -1,0 +1,15 @@
+<li class="mm-dropdown">
+    <a href="#">
+        <i class="menu-icon fa fa-{{icon}}"></i>
+        <span class="mm-text">{{title}}</span>
+    </a>
+    <ul>
+        {% for key, item in submenu %}
+        <li>
+            <a href="{{item.url}}">
+                <span class="mm-text">{{item.title}}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</li>

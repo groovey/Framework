@@ -11,6 +11,8 @@ use Silex\Provider\WebProfilerServiceProvider;
 use Silex\Provider\VarDumperServiceProvider;
 use Groovey\Config\Providers\ConfigServiceProvider;
 use Groovey\ORM\Providers\ORMServiceProvider;
+use Groovey\Menu\Providers\MenuServiceProvider;
+use Groovey\Breadcrumb\Providers\BreadcrumbServiceProvider;
 use Groovey\Framework\Providers\Dumper as DumperServiceProvider;
 
 $app->register(new SessionServiceProvider());
@@ -37,13 +39,25 @@ $app->register(new MonologServiceProvider(), [
 $app->register(new TwigServiceProvider(), [
         'twig.path' => [
                 APP_PATH.'/resources/templates',
-                APP_PATH.'/vendor/groovey/framework/resources/templates',
-                APP_PATH.'/vendor/groovey/framework/resources/templates/errors',
+                FRAMEWORK_PATH.'/resources/templates',
+                FRAMEWORK_PATH.'/resources/templates/errors',
             ],
     ]);
 
 $app->register(new ORMServiceProvider(), [
         'db.connection' => $app->config('database.mysql')
+    ]);
+
+
+$app->register(new MenuServiceProvider(), [
+        'menu.config'    => APP_PATH.'/resources/yaml/menu.yml',
+        'menu.templates' => FRAMEWORK_PATH.'/resources/templates/menus',
+        'menu.cache'     => APP_PATH.'/storage/cache',
+    ]);
+
+$app->register(new BreadcrumbServiceProvider(), [
+        'breadcrumb.path'  => FRAMEWORK_PATH.'/resources/templates/breadcrumbs',
+        'breadcrumb.cache' => APP_PATH.'/storage/cache',
     ]);
 
 return $app;

@@ -1,77 +1,7 @@
 <div id="main-menu" role="navigation">
     <div id="main-menu-inner">
         <ul class="navigation">
-            <li>
-                <a href="index.html">
-                    <i class="menu-icon glyphicon glyphicon-home"></i>
-                    <span class="mm-text">Dashboard</span>
-                </a>
-            </li>
-            <li class="mm-dropdown">
-                <a href="#">
-                    <i class="menu-icon fa fa-bluetooth"></i>
-                    <span class="mm-text">Layouts</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="layouts-grid.html">
-                            <span class="mm-text">Grid</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="layouts-main-menu.html">
-                            <span class="mm-text">Main menu</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="active">
-                <a href="tables.html">
-                <i class="menu-icon fa fa-table"></i><span class="mm-text">Tables</span></a>
-            </li>
-            <li>
-                <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">Stat panels</span></a>
-            </li>
-            <li>
-                <a href="widgets.html"><i class="menu-icon fa fa-flask"></i><span class="mm-text">Widgets</span></a>
-            </li>
-            <li class="mm-dropdown">
-                <a href="#"><i class="menu-icon fa fa-desktop"></i><span class="mm-text">UI elements</span></a>
-                <ul>
-                    <li>
-                        <a tabindex="-1" href="ui-buttons.html"><span class="mm-text">Buttons</span></a>
-                    </li>
-                    <li>
-                        <a tabindex="-1" href="ui-typography.html"><span class="mm-text">Typography</span></a>
-                    </li>
-                    <li>
-                        <a tabindex="-1" href="ui-utility-classes.html"><span class="mm-text">Utility classes</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mm-dropdown">
-                <a href="#"><i class="menu-icon fa fa-check-square"></i><span class="mm-text">Form components</span></a>
-                <ul>
-                    <li>
-                        <a tabindex="-1" href="forms-layouts.html"><span class="mm-text">Layouts</span></a>
-                    </li>
-                    <li>
-                        <a tabindex="-1" href="forms-general.html"><span class="mm-text">General</span></a>
-                    </li>
-                    <li>
-                        <a tabindex="-1" href="forms-advanced.html"><span class="mm-text">Advanced</span></a>
-                    </li>
-                    <li>
-                        <a tabindex="-1" href="forms-pickers.html"><span class="mm-text">Pickers</span></a>
-                    </li>
-                    <li>
-                        <a tabindex="-1" href="forms-validation.html"><span class="mm-text">Validation</span></a>
-                    </li>
-                    <li>
-                        <a tabindex="-1" href="forms-editors.html"><span class="mm-text">Editors</span></a>
-                    </li>
-                </ul>
-            </li>
+            {{app.menu.render|raw}}
         </ul>
     </div>
 </div>
