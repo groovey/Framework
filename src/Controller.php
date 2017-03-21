@@ -4,5 +4,4 @@ namespace Groovey\Framework;
 
 class Controller
 {
-
 }

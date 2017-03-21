@@ -5,7 +5,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
 
-    if ($app->config('app.debug')) {
+    if ($app['config']->get('app.debug')) {
         return;
     }
 

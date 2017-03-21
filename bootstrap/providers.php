@@ -28,7 +28,7 @@ $app->register(new ConfigServiceProvider(), [
     ]);
 
 $app->register(new DumperServiceProvider(), [
-        'dumper.show' => $app->config('app.debug'),
+        'dumper.show' => $app['config']->get('app.debug'),
     ]);
 
 $app->register(new MonologServiceProvider(), [
@@ -43,11 +43,6 @@ $app->register(new TwigServiceProvider(), [
                 FRAMEWORK_PATH.'/resources/templates/errors',
             ],
     ]);
-
-$app->register(new ORMServiceProvider(), [
-        'db.connection' => $app->config('database.mysql')
-    ]);
-
 
 $app->register(new MenuServiceProvider(), [
         'menu.config'    => APP_PATH.'/resources/yaml/menu.yml',
