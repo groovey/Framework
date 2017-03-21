@@ -2,6 +2,7 @@
     "name": "groovey/framework",
     "description": "Groovey Framework Package",
     "license": "MIT",
+    "keywords": ["silex", "groovey"],
     "type": "project",
     "authors": [
         {
@@ -17,8 +18,10 @@
         "monolog/monolog": "~1.19",
         "vlucas/phpdotenv" : "~2.0",
         "groovey/config" : "dev-master",
-        "groovey/orm" : "dev-master",
+        "groovey/db" : "dev-master",
         "groovey/migration" : "dev-master",
+        "groovey/support" : "dev-master",
+        "groovey/tester" : "dev-master",
         "groovey/seeder" : "dev-master",
         "groovey/generator" : "dev-master",
         "groovey/form" : "dev-master",
