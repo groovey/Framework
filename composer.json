@@ -18,6 +18,7 @@
         "monolog/monolog": "~1.19",
         "vlucas/phpdotenv" : "~2.0",
         "groovey/config" : "dev-master",
+        "groovey/console" : "dev-master",
         "groovey/db" : "dev-master",
         "groovey/migration" : "dev-master",
         "groovey/support" : "dev-master",
@@ -25,7 +26,6 @@
         "groovey/seeder" : "dev-master",
         "groovey/generator" : "dev-master",
         "groovey/form" : "dev-master",
-        "groovey/support" : "dev-master",
         "groovey/menu" : "dev-master",
         "groovey/breadcrumb" : "dev-master"
     },
