@@ -1,1 +1,1 @@
-console.log('Hello from app.js, thank you!');
+ console.log('Hello from app.js!');
