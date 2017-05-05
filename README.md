@@ -1,1 +1,1 @@
-## [READONLY] The Groovey Framework (Kernel)
+## [READONLY] The Groovey Framework
