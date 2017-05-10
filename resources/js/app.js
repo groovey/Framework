@@ -1,1 +1,2 @@
- console.log('Hello from app.js!');
+// var $ = require('jquery');
+// var sparkline = require('sparkline');
