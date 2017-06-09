@@ -1,23 +1,22 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<body class="theme-default main-menu-fixed main-menu-animated main-navbar-fixed">
-<div id="main-wrapper">
+<body class="light-skin fixed-navbar sidebar-scroll">
 
-    {% include 'navbar.html' %}
+    {% include 'header.html' %}
 
     {% include 'menu.html' %}
 
-    <div id="content-wrapper">
+    <div id="wrapper">
 
-       {% include 'listing.html' with {'title' : title} %}
+        <div class="content">
+            {% include 'dashboard.html' %}
+        </div>
 
-       {% include 'entry.html' with {'title' : title} %}
+        {% include 'sidebar.html' %}
 
-        <div id="main-menu-bg"></div>
+        {% include 'footer.html' %}
 
     </div>
 
-</div>
-</body>
 {% endblock %}
