@@ -1,8 +1,10 @@
 <li>
     <a href="{{url}}">
         <span class="nav-label">{{title}}</span>
-
-        <span class="label label-warning pull-right">{{status}}}</span>
-
+        {% if status == 'new' %}
+            <span class="label label-warning pull-right">{{status}}</span>
+        {% elseif status is not empty %}
+            <span class="label label-success pull-right">{{status}}</span>
+        {% endif %}
     </a>
 </li>
