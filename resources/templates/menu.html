@@ -1,5 +1,6 @@
 <aside id="menu">
     <div id="navigation">
+        <!--
         <div class="profile-picture">
             <a href="index.html">
                 <img src="/images/profile.jpg" class="img-circle m-b" alt="logo">
@@ -31,8 +32,12 @@
                 </div>
             </div>
         </div>
+        -->
 
         <ul class="nav" id="side-menu">
+
+            {{app.menu.render|raw}}
+
             <li class="active">
                 <a href="index.html"> <span class="nav-label">Dashboard</span> <span class="label label-success pull-right">v.1</span> </a>
             </li>
@@ -152,5 +157,6 @@
             </li>
 
         </ul>
+
     </div>
 </aside>
