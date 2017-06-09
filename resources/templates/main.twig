@@ -1,27 +1,27 @@
-{% extends "layout.html" %}
+{% extends "layout.twig" %}
 
 {% block content %}
 <body class="light-skin fixed-navbar sidebar-scroll">
 
-    {% include 'header.html' %}
+    {% include 'header.twig' %}
 
-    {% include 'menu.html' %}
+    {% include 'menu.twig' %}
 
     <div id="wrapper">
 
         <div class="content">
 
-            {% include 'dashboard.html' %}
+            {% include 'dashboard.twig' %}
 
-            {# include 'listing.html' with {'title' : title} #}
+            {# include 'listing.twig' with {'title' : title} #}
 
-            {# include 'entry.html' with {'title' : title} #}
+            {# include 'entry.twig' with {'title' : title} #}
 
         </div>
 
-        {% include 'sidebar.html' %}
+        {% include 'sidebar.twig' %}
 
-        {% include 'footer.html' %}
+        {% include 'footer.twig' %}
 
     </div>
 </body>
