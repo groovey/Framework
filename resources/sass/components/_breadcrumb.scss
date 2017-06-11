@@ -1,31 +1,16 @@
-.breadcrumb-container {
-  display: block;
-  border-radius: 0px;
-  padding: 10px 0px 0px 0px;
-  // background-color: green;
-  // padding: 30px 0px;
-  padding-top: 20px;
-
-
-  .hbreadcrumb {
-    padding: 2px 0px;
-    margin-bottom: 0px;
-    list-style: none;
-    background-color:$color-bright;
-    font-size: 12px;
-    border-radius: 0px;
-
-    > li {
+.breadcrumb {
+  padding: 2px 0px;
+  background-color:$color-bright;
+  li {
       display: inline-block;
 
       + li:before {
         padding: 0 5px;
-        color: $color-navy-blue;
+        font-weight: bold;
       }
-    }
-
-    > .active {
-      color: lighten($color-text,20%);
-    }
   }
+  > .active {
+      color: lighten($color-text,20%);
+  }
+
 }
