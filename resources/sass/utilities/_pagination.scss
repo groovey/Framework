@@ -1,0 +1,25 @@
+.pagination-example .pagination {
+  margin: 0 0 10px 0;
+  color: $color-text;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  // background-color: $color-blue;
+  // border-color: darken($color-blue, 5%);
+  background-color: $color-light-gray;
+  border-color: darken($color-light-gray, 5%);
+  color: $color-text;
+  // color: #fff;
+  cursor: default;
+  z-index: 2;
+}
+
+.pagination > li > a ,
+.pagination > li > a:hover {
+  color: $color-text;
+}

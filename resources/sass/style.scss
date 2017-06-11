@@ -11,6 +11,8 @@ $color-orange:#e67e22;
 $color-red:#e74c3c;
 $color-red-deep:#c0392b;
 
+$color-light-gray:#ddd;
+
 // Additional colors
 $color-text: #6a6c6f;
 $color-bright: #f7f9fa;
@@ -78,6 +80,7 @@ $main-transition: all 0.1s ease-out 0s;
 @import "./utilities/grid";
 @import "./utilities/heights_widths";
 @import "./utilities/fonts";
+@import "./utilities/pagination";
 @import "./utilities/various";
 
 // Skins
