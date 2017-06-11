@@ -9,11 +9,13 @@
 
     <div id="wrapper">
 
+        {% include 'breadcrumb.html' %}
+
         <div class="content">
 
-            {% include 'dashboard.html' %}
+            <!-- {% include 'dashboard.html' %} -->
 
-            {# include 'listing.html' with {'title' : title} #}
+            {% include 'listing.html' with {'title' : title} %}
 
             {# include 'entry.html' with {'title' : title} #}
 
