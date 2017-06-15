@@ -59,6 +59,7 @@ class Main implements ControllerProviderInterface
         }
 
         return $app['twig']->render('login.html', [
+            'title'         => 'Login',
             'error'         => $error,
             'last_username' => $app['session']->get('last_username'),
         ]);
@@ -66,7 +67,7 @@ class Main implements ControllerProviderInterface
 
     public function forgot(Application $app, Request $request) {
         return $app['twig']->render('forgot.html', [
-
+            'title' => 'Forgot Password'
         ]);
     }
 }
