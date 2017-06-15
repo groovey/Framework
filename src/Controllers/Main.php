@@ -20,6 +20,8 @@ class Main implements ControllerProviderInterface
             ->after([MiddlewareMain::class, 'after'])
         ;
 
+        $controller->match('/forgot', [$this, 'forgot']);
+
         return $controller;
     }
 
@@ -59,6 +61,12 @@ class Main implements ControllerProviderInterface
         return $app['twig']->render('login.html', [
             'error'         => $error,
             'last_username' => $app['session']->get('last_username'),
+        ]);
+    }
+
+    public function forgot(Application $app, Request $request) {
+        return $app['twig']->render('forgot.html', [
+
         ]);
     }
 }
