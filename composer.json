@@ -11,23 +11,26 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.5",
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
         "symfony/var-dumper" : "~3.0",
         "monolog/monolog": "~1.19",
         "vlucas/phpdotenv" : "~2.0",
+        "groovey/breadcrumb" : "dev-master",
         "groovey/config" : "dev-master",
         "groovey/console" : "dev-master",
         "groovey/db" : "dev-master",
-        "groovey/migration" : "dev-master",
-        "groovey/support" : "dev-master",
-        "groovey/tester" : "dev-master",
-        "groovey/seeder" : "dev-master",
-        "groovey/generator" : "dev-master",
         "groovey/form" : "dev-master",
+        "groovey/generator" : "dev-master",
+        "groovey/jwt" : "dev-master",
         "groovey/menu" : "dev-master",
-        "groovey/breadcrumb" : "dev-master"
+        "groovey/migration" : "dev-master",
+        "groovey/seeder" : "dev-master",
+        "groovey/security" : "dev-master",
+        "groovey/support" : "dev-master",
+        "groovey/sso" : "dev-master",
+        "groovey/tester" : "dev-master"
     },
     "autoload": {
         "psr-4": {
