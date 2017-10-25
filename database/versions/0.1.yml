@@ -1,0 +1,28 @@
+date: '2017-10-26 03:39:13'
+changelog: >
+
+    Add users table
+
+up: >
+
+    CREATE TABLE `users` (
+      `id` int(11) NOT NULL,
+      `status` enum('active','inactive') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'active',
+      `email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+      `created_at` datetime NOT NULL
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+    INSERT INTO `users` (`id`, `status`, `email`, `created_at`) VALUES
+    (1, 'active', 'test1@gmail.com', '2017-10-25 00:00:00');
+
+    ALTER TABLE `users`
+      ADD UNIQUE KEY `email` (`email`),
+      ADD KEY `id` (`id`,`email`) USING BTREE;
+
+    ALTER TABLE `users`
+      MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+
+down: >
+
+    DROP TABLE users;
