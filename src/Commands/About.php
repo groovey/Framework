@@ -20,7 +20,7 @@ class About extends Command
     {
         $this
             ->setName('about')
-            ->setDescription('Shows the author.')
+            ->setDescription('Shows the author')
         ;
     }
 

@@ -21,7 +21,7 @@ class DB extends Command
     {
         $this
             ->setName('db')
-            ->setDescription('Shows the database connection string.')
+            ->setDescription('Shows the database connection string')
         ;
     }
 

@@ -30,6 +30,7 @@
         "groovey/security" : "dev-master",
         "groovey/support" : "dev-master",
         "groovey/sso" : "dev-master",
+        "groovey/version" : "dev-master",
         "groovey/tester" : "dev-master"
     },
     "autoload": {
