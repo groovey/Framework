@@ -2,7 +2,7 @@
 
 use Silex\Application;
 
-class App extends Application
+class app extends Application
 {
     use Silex\Application\MonologTrait;
     use Silex\Application\TwigTrait;

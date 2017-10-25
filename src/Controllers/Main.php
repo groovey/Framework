@@ -35,39 +35,57 @@ class Main implements ControllerProviderInterface
     public function login(Application $app, Request $request)
     {
         $error    = '';
+        $method   = $request->getMethod();
         $username = $request->get('username');
         $password = $request->get('password');
-        $submit   = $request->get('submit');
 
-        if ($submit && !$username) {
+        $app['trace']->show(true);
+
+        if ($method && !$username) {
             $error = 'Username is required';
-            $app['session']->set('last_username', '');
-        } elseif ($submit && !$password) {
+            // $app['session']->set('last_username', '');
+        } elseif ($method && !$password) {
             $error = 'Password is required';
-            $app['session']->set('last_username', $username);
-        } elseif ($submit) {
+            // $app['session']->set('last_username', $username);
+        } elseif ($method === 'POST') {
+            $data = [
+                'app'      => $app['config']->get('app.id'),
+                'token'    => $app['config']->get('app.token'),
+                'email'    => 'test1@gmail.com',
+                'password' => 'test1',
+            ];
+
+            $response = $app['sso.client']->auth($data);
+            $app['trace']->debug($response);
+
+            die();
+
+            // $app['trace']->debug($response);
 
             // TODO
-            if ($username === 'admin' && $password === 'ko') {
-                $app['session']->set('user', ['username' => $username]);
+            // if ($username === 'admin' && $password === 'ko') {
+            //     // $app['session']->set('user', ['username' => $username]);
 
-                return $app->redirect('/');
-            } else {
-                $app['session']->set('last_username', $username);
-                $error = 'Bad credentials';
-            }
+            //     return $app->redirect('/');
+            // } else {
+            //     $app['session']->set('last_username', $username);
+            //     $error = 'Bad credentials';
+            // }
         }
+
+        $error = 'Invalid credentials';
 
         return $app['twig']->render('login.html', [
             'title'         => 'Login',
             'error'         => $error,
-            'last_username' => $app['session']->get('last_username'),
+            // 'last_username' => $app['session']->get('last_username'),
         ]);
     }
 
-    public function forgot(Application $app, Request $request) {
+    public function forgot(Application $app, Request $request)
+    {
         return $app['twig']->render('forgot.html', [
-            'title' => 'Forgot Password'
+            'title' => 'Forgot Password',
         ]);
     }
 }

@@ -20,17 +20,13 @@ class About extends Command
     {
         $this
             ->setName('about')
-            ->setDescription('Shows the database connection information.')
+            ->setDescription('Shows the author.')
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $app         = $this->app;
-        $environment = strtolower(ENVIRONMENT);
-        $host        = $app->config('database.mysql.host');
-        $database    = $app->config('database.mysql.database');
-        $version     = '0.0.0'; // TODO : Version Manager
+        $app = $this->app;
 
         $about = <<<ABOUT
  <comment>
@@ -45,11 +41,6 @@ class About extends Command
  Author : Harold Kim Cantil <pokoot@gmail.com>
 
  Crafted with love.
-
- Version: $version
- Environment : $environment
- Host: $host
- Database : $database
 
 ABOUT;
 

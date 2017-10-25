@@ -5,35 +5,45 @@ use Silex\Provider\SerializerServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\TwigServiceProvider;
-use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
-use Silex\Provider\WebProfilerServiceProvider;
-use Silex\Provider\VarDumperServiceProvider;
 use Groovey\Config\Providers\ConfigServiceProvider;
-use Groovey\ORM\Providers\ORMServiceProvider;
 use Groovey\Menu\Providers\MenuServiceProvider;
 use Groovey\Breadcrumb\Providers\BreadcrumbServiceProvider;
-use Groovey\Framework\Providers\Dumper as DumperServiceProvider;
+use Groovey\Support\Providers\TraceServiceProvider;
+use Groovey\Tester\Providers\TesterServiceProvider;
+use Groovey\JWT\Providers\JWTServiceProvider;
+use Groovey\Support\Providers\DateServiceProvider;
+use Groovey\Support\Providers\HttpServiceProvider;
+use Groovey\Security\Providers\SecurityServiceProvider;
+use Groovey\SSO\Providers\SSOServiceProvider;
+use Groovey\DB\Providers\DBServiceProvider;
 
 $app->register(new SessionServiceProvider());
 $app->register(new SerializerServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
-$app->register(new ValidatorServiceProvider());
-$app->register(new VarDumperServiceProvider());
+$app->register(new TraceServiceProvider());
+$app->register(new TesterServiceProvider());
+$app->register(new DateServiceProvider());
+$app->register(new HttpServiceProvider());
+$app->register(new SecurityServiceProvider());
 
 $app->register(new ConfigServiceProvider(), [
         'config.path'        => APP_PATH.'/config',
         'config.environment' => ENVIRONMENT,
     ]);
 
-$app->register(new DumperServiceProvider(), [
-        'dumper.show' => $app['config']->get('app.debug'),
-    ]);
-
 $app->register(new MonologServiceProvider(), [
         'monolog.name'    => 'app',
         'monolog.logfile' => APP_PATH.'/storage/logs/'.date('Y-m-d').'.log',
+    ]);
+
+$app->register(new JWTServiceProvider(), [
+        'jwt.key' => $app['config']->get('app.jwt_key'),
+    ]);
+
+$app->register(new SSOServiceProvider(), [
+        'sso.domain' => $app['config']->get('app.sso_url'),
     ]);
 
 $app->register(new TwigServiceProvider(), [
@@ -53,6 +63,20 @@ $app->register(new MenuServiceProvider(), [
 $app->register(new BreadcrumbServiceProvider(), [
         'breadcrumb.path'  => FRAMEWORK_PATH.'/resources/templates/breadcrumbs',
         'breadcrumb.cache' => APP_PATH.'/storage/cache',
+    ]);
+
+$app->register(new DBServiceProvider(), [
+        'db.connection' => [
+            'host'      => 'localhost',
+            'driver'    => 'mysql',
+            'database'  => 'groovey',
+            'username'  => 'root',
+            'password'  => '',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'logging'   => true,
+        ],
     ]);
 
 return $app;
