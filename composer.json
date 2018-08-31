@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=7.2",
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
         "symfony/var-dumper" : "~3.0",
